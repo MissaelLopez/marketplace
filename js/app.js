@@ -7,3 +7,16 @@ if (navigator.serviceWorker) {
   }
   navigator.serviceWorker.register(swLocation);
 }
+
+function isOnline() {
+  if (navigator.onLine) {
+    alert("Online");
+  } else {
+    alert("Offline");
+  }
+}
+
+window.addEventListener("online", isOnline);
+window.addEventListener("offline", isOnline);
+
+isOnline();
